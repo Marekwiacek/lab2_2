@@ -16,7 +16,15 @@ public class IdTest {
 		id = new Id("Test");
 		boolean isValid = true;
 		
-		assertThat(id.equals(new Id("Test")), equalTo(isValid));
-		
+		assertThat(id.equals(new Id("Test")), equalTo(isValid));		
 	}
+
+	@Test
+	public void userNotTest() {
+		id = new Id("Test");
+		boolean isValid = false;
+		
+		assertThat(id.equals(new Id("NotTest")), equalTo(isValid));		
+	}
+
 }
