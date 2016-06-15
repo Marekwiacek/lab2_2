@@ -27,4 +27,20 @@ public class IdTest {
 		assertThat(id.equals(new Id("NotTest")), equalTo(isValid));		
 	}
 
+	@Test
+	public void userTestObject() {
+		id = new Id("Test");
+		boolean isValid = false;
+		
+		assertThat(id.equals(new String("TestString")), equalTo(isValid));		
+	}
+
+	@Test
+	public void userTestNull() {
+		id = new Id("Test");
+		boolean isValid = false;
+		
+		assertThat(id.equals(null), equalTo(isValid));		
+	}
+
 }
